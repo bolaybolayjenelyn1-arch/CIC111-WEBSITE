@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inspirational Portfolio - Light of the World</title>
+  <style>
+    
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to bottom, #fff7e6, #fffbe6);
+      color: #333;
+      overflow-x: hidden;
+    }
+    h1, h2, h3 {
+      text-align: center;
+      color: lightgreen;
+      
+    }
+    p {
+      max-width: 700px;
+      margin: 10px auto 30px auto;
+      text-align: center;
+      line-height: 1.6;
+      color: lightgreen;
+      font-size: 30px;
+    }
+    section {
+      padding: 60px 20px;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 1s forwards;
+    }
+    
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    #cover {
+      height: 50vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: radial-gradient(circle at center, #333, #555);
+      text-align: center;
+      animation: fadeUp 2s forwards;
+    }
+    #cover h1 {
+      font-size: 4em;
+    }
+    #cover p {
+      font-size: 1.5em;
+      max-width: 600px;
+      
+    }
+    
+    .values-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+    }
+    .value-box {
+      background: rgba(255, 250, 210, 0.8);
+      padding: 20px;
+      border-radius: 15px;
+      width: 200px;
+      text-align: center;
+      box-shadow: 0 0 20px #ffea85;
+      transition: transform 0.3s;
+    }
+    .value-box:hover {
+      transform: translateY(-10px);
+    }
+    
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+    .card {
+      background: rgba(255, 245, 220, 0.8);
+      padding: 20px;
+      border-radius: 15px;
+      width: 250px;
+      text-align: center;
+      box-shadow: 0 0 15px #ffea85;
+      transition: transform 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-10px);
+    }
+    
+    
+    
+    footer {
+      text-align: center;
+      padding: 30px 20px;
+      background: #fffbe6;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+
+  
+  <section id="cover">
+    <h1 class="glow">Light of the World</h1>
+    <p>"Shining my values, goals, and works for a brighter tomorrow."</p>
+  </section>
+
+  
+  <section>
+    <h2 class="glow">About Me</h2>
+    <p>Hi! I am Jenelyn Bolaybolay, a college student who strives to be a light in my community. I believe in helping, inspiring, and spreading kindness in school and beyond.</p>
+  </section>
+
+  
+  <section>
+    <h2 class="glow">Guiding Values</h2>
+    <div class="values-container">
+      <div class="value-box">Faith</div>
+      <div class="value-box">Integrity</div>
+      <div class="value-box">Responsibility</div>
+      <div class="value-box">Kindness</div>
+      <div class="value-box">Perseverance</div>
+    </div>
+    <p>"Let your light shine before others, that they may see your good deeds." – Inspired by Matthew 5:16</p>
+  </section>
+
+  
+  <section>
+    <h2 class="glow">Work & Achievements</h2>
+    <div class="card-container">
+      <div class="card">Organized a school clean-up activity</div>
+      <div class="card">Assisted classmates with school projects</div>
+      <div class="card">Participated in community service events</div>
+    </div>
+  </section>
+
+  
+  <section>
+    <h2 class="glow">Goals</h2>
+    <div class="card-container">
+      <div class="card">Improve academic performance</div>
+      <div class="card">Be more involved in community service</div>
+      <div class="card">Develop leadership skills</div>
+      <div class="card">Inspire others to do good</div>
+      <div class="card">Lead initiatives that bring light to others</div>
+    </div>
+  </section>
+
+  
+  <section>
+    <h2 class="glow">My Light</h2>
+    <p>I aim to be a person who encourages others, shares hope, and spreads positivity. Even small acts of kindness can light up someone’s day. My goal is to shine bright and inspire others to do the same.</p>
+  </section>
+
+  
+  <footer>
+    "My Light Today, Tomorrow, and Beyond."
+  </footer>
+
+  <script>
+    
+    const sections = document.querySelectorAll('section');
+    const options = { threshold: 0.1 };
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting){
+          entry.target.style.opacity = 1;
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, options);
+
+    sections.forEach(section => observer.observe(section));
+  </script>
+
+</body>
+</html>
